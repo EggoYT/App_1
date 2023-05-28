@@ -38,9 +38,10 @@ public class Main {
 			+ "Ответ: нет. ";
 	static Database companies;
 	static BufferedWriter logging;
+	static Parser parser;
 	
 	public static String takeMessage(String userMessage, String role) throws IOException {
-		String apiKey = "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";
+		String apiKey = "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";
 		
         URL url = new URL("https://api.openai.com/v1/chat/completions");
 
@@ -116,6 +117,7 @@ public class Main {
 			
 			System.out.println("Клиент подключен по адресу: " + socket.getInetAddress().getHostAddress());
 			
+			String url = "";
 			int state;
 			String message;
 			while(true) {
@@ -126,7 +128,6 @@ public class Main {
 					String request = "undefined";
 					long time = 0;
 					Integer[] info = null;
-					boolean is_good = false;
 					try {
 						companyId = c_input.readLine();
 						userId = c_input.readLine();
@@ -166,12 +167,14 @@ public class Main {
 						else
 							throw new IllegalAccessException("Некорректный запрос!");
 						System.out.println(message);
-						message = getBestResult(message);
-						System.out.println(message);
+						url = getBestResult(message);
+						System.out.println(url);
 						
 						time = new Timestamp(System.currentTimeMillis()).getTime();
 						if(time - timestamp > 15000L)
 							throw new TimeLimitExceededException("Timeout");
+						parser = new Parser(url);
+						message = parser.get(message);
 					} catch(AccountNotFoundException e) {
 						System.err.println(e.getMessage());
 						state = 1;
@@ -188,6 +191,7 @@ public class Main {
 					
 					c_output.write(Integer.toString(state) + "\r");
 					c_output.write(message + "\r");
+					c_output.write(url + "\r");
 					c_output.flush();
 					
 					if(state == 0) {
