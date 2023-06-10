@@ -1,13 +1,24 @@
-"someCompany""someUser" - 1685284084553 - 1685284090936 - Ответ: нет.
-"someCompany""someUser" - 1685284193990 - 0 - Некорректный запрос!
-"someCompany""someUser" - 1685284210533 - 1685284214862 - no_error
-"someCompany""someUser" - 1685284397067 - 1685284402527 - no_error
-"someCompany""someUser" - 1685284418051 - 1685284422939 - no_error
-"someCompany""someUser" - 1685284528155 - 1685284532562 - no_error
-"someCompany""someUser" - 1685284545601 - 1685284549440 - no_error
-"someCompany""someUser" - 1685284625209 - 1685284629748 - no_error
-"someCompany""someUser" - 1685284642173 - 1685284645979 - no_error
-"someCompany""someUser" - 1685284799991 - 1685284806741 - no_error
-"someCompany""someUser" - 1685284864488 - 1685284870687 - no_error
-"someCompany""someUser" - 1685284882539 - 0 - Превышен лимит запросов от пользователя
-"someCompany""someUser" - 1685294684565 - 1685294709989 - Превышено время ожидания запроса!
+[INFO] Fri Jun 09 22:48:17 MSK 2023 - Fri Jun 09 22:48:17 MSK 2023 - "someCompany" - "someUser" -  -  могу ли я открыть сигаретный ларек?
+[INFO] Fri Jun 09 22:55:32 MSK 2023 - Fri Jun 09 22:55:32 MSK 2023 - "someCompany" - "someUser" -  -  могу ли я открыть сигаретный ларек?
+[INFO] Fri Jun 09 22:55:41 MSK 2023 - Fri Jun 09 22:55:41 MSK 2023 - "someCompany" - "someUser" -  - могу ли я открыть ларек для продажи табачной продукции в жилом доме?
+[ERROR] Fri Jun 09 22:55:51 MSK 2023 - Caused server error: {    "error": {        "message": "Rate limit reached for default-gpt-3.5-turbo in organization org-rVr8yRDrgwlIexQDDBlvb0LS on requests per min. Limit: 3 / min. Please try again in 20s. Contact us through our help center at help.openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://platform.openai.com/account/billing to add a payment method.",        "type": "requests",        "param": null,        "code": null    }} - "someUser" - "someCompany" - " могу ли я открыть вейпшоп?"
+[INFO] Fri Jun 09 22:57:42 MSK 2023 - Fri Jun 09 22:57:42 MSK 2023 - "someCompany" - "someUser" -  -  могу ли я открыть сигаретный ларек?
+[INFO] Fri Jun 09 22:57:59 MSK 2023 - Fri Jun 09 22:57:59 MSK 2023 - "someCompany" - "someUser" -  - могу ли я открыть ларек для продажи табачных изделий?
+[ERROR] Fri Jun 09 22:58:06 MSK 2023 - Caused server error: Нельзя отправлять больше раза запрос чаще чем в минуту! Время ожидания: -5837. - "someUser" - "someCompany" - " могу ли я открыть вейпшоп в жилом доме?"
+[INFO] Fri Jun 09 22:59:39 MSK 2023 - Fri Jun 09 22:59:39 MSK 2023 - "someCompany" - "someUser" -  -  могу ли я открыть сигаретный ларек?
+[INFO] Fri Jun 09 22:59:51 MSK 2023 - Fri Jun 09 22:59:51 MSK 2023 - "someCompany" - "someUser" -  - могу ли я открыть ларек для продажи табачных изделий?
+[ERROR] Fri Jun 09 23:00:05 MSK 2023 - Caused server error: Нельзя отправлять больше раза запрос чаще чем в минуту! Время ожидания: -12520. - "someUser" - "someCompany" - " могу ли я открыть вейпшоп в жилом доме?"
+[ERROR] Fri Jun 09 23:00:25 MSK 2023 - Caused server error: Нельзя отправлять больше раза запрос чаще чем в минуту! Время ожидания: -32966. - "someUser" - "someCompany" - " могу ли я открыть вейпшоп в жилом доме?"
+[INFO] Fri Jun 09 23:01:06 MSK 2023 - Fri Jun 09 23:01:06 MSK 2023 - "someCompany" - "someUser" -  -  могу ли я открыть вейпшоп в жилом доме?
+[INFO] Fri Jun 09 23:04:04 MSK 2023 - Fri Jun 09 23:04:04 MSK 2023 - "someCompany" - "someUser" -  -  могу ли я открыть сигаретный ларек в жилом доме?
+[INFO] Fri Jun 09 23:07:03 MSK 2023 - Fri Jun 09 23:07:03 MSK 2023 - "someCompany" - "someUser" -  -  могу ли я открыть ларек по продаже сигарет в спальном районе?
+[ERROR] Fri Jun 09 23:11:16 MSK 2023 - Caused server error: {    "error": {        "message": "We could not parse the JSON body of your request. (HINT: This likely means you aren't using your HTTP library correctly. The OpenAI API expects a JSON payload, but what was sent was not valid JSON. If you have trouble figuring out how to fix this, please contact us through our help center at help.openai.com.)",        "type": "invalid_request_error",        "param": null,        "code": null    }} - "someUser" - "someCompany" - " как мне правильно открыть типографию для печати принтов на одежде?"
+[INFO] Sat Jun 10 15:02:41 MSK 2023 - Sat Jun 10 15:02:41 MSK 2023 - "someCompany" - "someUser" -  -  могу ли я открыть ларек по продаже сигарет в спальном районе?
+[INFO] Sat Jun 10 15:02:54 MSK 2023 - Sat Jun 10 15:02:54 MSK 2023 - "someCompany" - "someUser" -  - могу ли я открыть ларек по продаже сигарет в спальном районе?
+[ERROR] Sat Jun 10 15:03:10 MSK 2023 - Caused server error: {    "error": {        "message": "You exceeded your current quota, please check your plan and billing details.",        "type": "insufficient_quota",        "param": null,        "code": null    }} - "someUser" - "someCompany" - " могу ли я открыть ларек по продаже сигарет в спальном районе?"
+[INFO] Sat Jun 10 15:17:18 MSK 2023 - Sat Jun 10 15:17:18 MSK 2023 - "someCompany" - "someUser" -  -  могу ли я открыть ларек для продажи сигарет?
+[INFO] Sat Jun 10 15:18:33 MSK 2023 - Sat Jun 10 15:18:33 MSK 2023 - "someCompany" - "someUser" -  - /запрос могу ли я открыть ларек для продажи табачных изделий в жилом доме?
+[ERROR] Sat Jun 10 15:19:35 MSK 2023 - Caused server error: Некорректный запрос! - "someUser" - "someCompany" - " как потушить ковер который горит под водой?"
+[INFO] Sat Jun 10 19:59:44 MSK 2023 - Sat Jun 10 19:59:44 MSK 2023 - "someCompany" - "someUser" -  -  Какие методики управления проектами считаются наиболее эффективными для малого и среднего бизнеса?
+[INFO] Sat Jun 10 20:01:06 MSK 2023 - Sat Jun 10 20:01:06 MSK 2023 - "someCompany" - "someUser" -  -  Какие нормативные акты устанавливают требования к охране труда и безопасности в малом и среднем бизнесе в России?
+[INFO] Sat Jun 10 20:07:39 MSK 2023 - Sat Jun 10 20:07:39 MSK 2023 - "someCompany" - "someUser" -  -  Могу ли я открыть ларек по продаже сигарет в доме?

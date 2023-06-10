@@ -11,9 +11,28 @@
 		  <version>1.16.1</version>
 	  </dependency>
 	  <dependency>
-    	  <groupId>org.apache.lucene</groupId>
-    	  <artifactId>lucene-core</artifactId>
-    	  <version>9.6.0</version>
+  		  <groupId>edu.stanford.nlp</groupId>
+  		  <artifactId>stanford-corenlp</artifactId>
+  		  <version>4.5.4</version>
 	  </dependency>
   </dependencies>
+  <packaging>jar</packaging>
+  <build>
+  	<plugins>
+    	<plugin>
+      		<groupId>org.apache.maven.plugins</groupId>
+      		<artifactId>maven-jar-plugin</artifactId>
+      		<version>3.1.0</version>
+      		<configuration>
+        		<archive>
+          			<manifest>
+            			<addClasspath>true</addClasspath>
+            			<classpathPrefix>lib/</classpathPrefix>
+            			<mainClass>App.Main</mainClass>
+          			</manifest>
+        		</archive>
+      		</configuration>
+    	</plugin>
+  	</plugins>
+  </build>
 </project>

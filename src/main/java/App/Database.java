@@ -2,6 +2,7 @@ package App;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -10,19 +11,21 @@ import java.util.HashSet;
 import java.util.Map.Entry;
 
 public class Database {
-	public HashMap<String, Integer[]> users_info;
-	public HashMap<String, HashSet<String>> companies_info;
+	public HashMap<String, Integer[]> users_info; //ключ - пользователь, значение - информация о нем: 0 - количество оставшихся запросов, 1 - последняя оценка бота
+	public HashMap<String, HashSet<String>> companies_info; //ключ - компания, значение - массив пользователей
 	String path;
 	
-	public Database(String path){
+	public Database(String path) throws IOException{ //база данных. умеет пока парсить csv, но можно и sql подрубить при желании
 		this.path = path;
 		users_info = new HashMap<String, Integer[]>();
 		companies_info = new HashMap<String, HashSet<String>>();
 		loadDatabase();
 	}
 	
-	public void loadDatabase() {
+	public void loadDatabase() throws IOException { //функция подгрузки базы данных
+		//п@сх@лка 1. Анекдот: На дне океана рыбка-шутник спросила рыбку-грустинку: "Почему ты такая грустная?", а та ответила: "Потому что вода тут соленая, а я забыла свой хлеб".
 		try(BufferedReader reader = new BufferedReader(new FileReader(path));) {
+			//чисто парсинг csv файла, где все разделено <;>...
 			while(reader.ready()) {
 				String[] line = reader.readLine().split(";");
 				if(line.length != 4)
@@ -53,12 +56,13 @@ public class Database {
 					users_info.put(user, user_info);
 				}
 			}
-		} catch(IOException e) {
+		} catch(FileNotFoundException e) {
 			System.err.println("Can't load database caused to\n" + e.getMessage());
 		}
 	}
 	
 	public void close() {
+		//закрываем, обновляя бд
 		try(BufferedWriter writer = new BufferedWriter(new FileWriter(path));){
 			for(Entry<String, HashSet<String>> comps : companies_info.entrySet()) {
 				for(String usrs : comps.getValue()) {
